@@ -1,19 +1,11 @@
-<?php 
-while(true) {
-    $input = trim(fgets(STDIN));
-    [$N, $L, $Q] = array_map('floatval', explode(' ', $input));
+<?php
 
-    if ($N == 0 && $L == 0 && $Q == 0) {
-        break;
-    }
+$t = (int)trim(fgets(STDIN));
 
-    $names = explode(' ', trim(fgets(STDIN)));
-    $cuias = floor($L / $Q);
-    $lastVolume = $L % $Q;
+for($i = 0; $i < $t; $i++){
+    $x = (int)trim(fgets(STDIN));
+    $binarios = decbin($x);
+    $qntd = substr_count($binarios, "1");
 
-    $indice = ($cuias - 1) % $N;
-    $ricoDoMate = $names[$indice];
-
-    echo $rico_do_mate . " " . number_format($last_volume, 1) . PHP_EOL;
-
+    echo $qntd .PHP_EOL;
 }
