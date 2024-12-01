@@ -2,6 +2,7 @@
 define('CONTROL', true);
 
 $routes = require_once('../inc/routes.php');
+require_once('../inc/apiConsumer.php');
 
 $route = $_GET['route'] ?? 'home';
 
@@ -21,4 +22,10 @@ switch($route){
             require_once '../scripts/404.php';
             require_once '../inc/footer.php';;
             break;
+
+            case 'country':
+                require_once '../inc/header.php';
+                require_once '../scripts/country.php';
+                require_once '../inc/footer.php';;
+                break;
 }
