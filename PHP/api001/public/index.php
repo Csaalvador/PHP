@@ -13,7 +13,7 @@ if(!in_array($route, $routes)){
 switch($route){
     case 'home':
         require_once '../inc/header.php';
-        require_once '../scripts/home.php';
+          require_once '../scripts/home.php';
         require_once '../inc/footer.php';
         break;
 
