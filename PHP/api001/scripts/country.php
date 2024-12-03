@@ -1,20 +1,16 @@
 <?php 
 defined('CONTROL') or die('Acesso negado');
 
-// Captura o nome do país da URL
 $country = $_GET['country_name'] ?? null;
 
-// Verifica se o país foi selecionado
 if (!$country) {
     echo '<p>Erro: Nenhum país foi selecionado.</p>';
     return;
 }
 
-// Inicializa a API e faz a requisição
 $api = new apiConsumer();
 $countryData = $api->getCountry($country);
 
-// Exibe os dados do país
 $name = $countryData[0]['name']['common'] ?? 'Nome não disponível';
 $capital = $countryData[0]['capital'][0] ?? 'Capital não disponível';
 $flag = $countryData[0]['flags']['png'] ?? '';
