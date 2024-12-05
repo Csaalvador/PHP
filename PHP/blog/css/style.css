@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6495ED;
+}
+
+.container {
+    width: 1000px;
+    background: #fff;
+    margin: 0 auto;
+    border-left: 2px #ccc;
+    border-right: 2px #ccc;
+}
+
+.topo{
+    border-bottom:  2px solid #ccc;
+}
+
+.topo a{
+    text-decoration: none;
+    font-size: 25px;    
+    padding: 20px 25px;
+    font: 'Arial';
+}
+
+.topo a:hover{
+    text-decoration: underline;
+}
+
+.content {
+    background: #fff;
+    padding: 20px 25px;
+}
+
+.content section {
+    padding: 50px;
+}
+
+.content article h2 a{
+    font: 22px Arial;
+    color: #333;
+    text-decoration: none;
+}
+
+.content article h2 a:hover {
+    text-decoration: underline;
+}
