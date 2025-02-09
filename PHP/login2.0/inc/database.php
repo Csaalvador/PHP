@@ -14,6 +14,7 @@ class Database
             $stmt->execute($params);
 
             $result = $stmt->fetchAll(PDO::FETCH_CLASS);
+            echo "está funcionando";
 
             return [
                 'status' => 'success',
@@ -24,6 +25,7 @@ class Database
                 'status' => 'error',
                 'data' => $err->getMessage()
             ];
+            echo 'não está funcionando';
         }
     }
 }
